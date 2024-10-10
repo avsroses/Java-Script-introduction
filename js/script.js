@@ -2,11 +2,15 @@
 // Variables
 // *********
 // Constant variables
+const imageOne = "assets/kirby.jpeg";
+const imageTwo = "assets/samus.jpeg"
+const imageThree = "assets/Wolf.webp"
+
 const myButton = document.getElementById("my-button");
 const myParagraph = document.getElementById("my-paragraph");
 const characterImage = document.getElementById("image-1");
 // Changing variables
-let clickCounter = 0;
+let characterCounter = 1;
 
 
 
@@ -15,12 +19,21 @@ function clickFunction() {
 
     // Adds to counter and outputs to console
     console.log('The button has been clicked');
-    clickCounter++;
+    characterCounter++;
+
+    // IF statement for which character to display per counter
+    if(characterCounter === 1){
+        characterImage.src = imageOne;
+    } 
+    else if(characterCounter === 2) {
+        characterImage.src = imageTwo;
+    } 
+    else if(characterCounter === 3) {
+        characterImage.src = imageThree;
+    }
 
     // Changes text without changing it in the HTML
-    myParagraph.innerHTML = "I have been clicked " + clickCounter + " time(s)";
-    // Changes image beinmg displayed
-    characterImage.src = "assets/Wolf.webp";
+    myParagraph.innerHTML = "I am on character " + characterCounter;
 }
 
 // Two methods - both do the same
