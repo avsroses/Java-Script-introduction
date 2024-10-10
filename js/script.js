@@ -21,6 +21,10 @@ function clickFunction() {
     console.log('The button has been clicked');
     characterCounter++;
 
+    if(characterCounter > 3) {
+        characterCounter = 1;
+    }
+
     // IF statement for which character to display per counter
     if(characterCounter === 1){
         characterImage.src = imageOne;
