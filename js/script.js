@@ -14,7 +14,11 @@ let characterCounter = 1;
 
 
 
-// Function for when button is clicked
+/**
+ * update character counter and display next character
+ * and sets counter back to 1 if 3 has been passed
+ * @returns when character is chosen
+ */
 function clickFunction() {
 
     // Adds to counter
