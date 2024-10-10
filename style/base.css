@@ -30,3 +30,8 @@ a {
   border-radius: 5px;
   cursor: pointer;
 }
+
+#image-1 {
+  height: 250px;
+  width: 250px;
+}

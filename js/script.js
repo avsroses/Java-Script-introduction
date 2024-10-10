@@ -1,10 +1,16 @@
+// *********
 // Variables
+// *********
+// Constant variables
 const myButton = document.getElementById("my-button");
 const myParagraph = document.getElementById("my-paragraph");
 const characterImage = document.getElementById("image-1");
-
+// Changing variables
 let clickCounter = 0;
 
+
+
+// Function for when button is clicked
 function clickFunction() {
 
     // Adds to counter and outputs to console
