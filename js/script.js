@@ -21,23 +21,28 @@ function clickFunction() {
     console.log('The button has been clicked');
     characterCounter++;
 
-    if(characterCounter > 3) {
+    // If statement to reset counter
+    if (characterCounter > 3) {
         characterCounter = 1;
-    }
-
-    // IF statement for which character to display per counter
-    if(characterCounter === 1){
-        characterImage.src = imageOne;
-    } 
-    else if(characterCounter === 2) {
-        characterImage.src = imageTwo;
-    } 
-    else if(characterCounter === 3) {
-        characterImage.src = imageThree;
     }
 
     // Changes text without changing it in the HTML
     myParagraph.innerHTML = "I am on character " + characterCounter;
+
+    // IF statement for which character to display per counter
+    if (characterCounter === 1) {
+        characterImage.src = imageOne;
+        return;
+    }
+    else if (characterCounter === 2) {
+        characterImage.src = imageTwo;
+        return;
+    }
+    else if (characterCounter === 3) {
+        characterImage.src = imageThree;
+        return;
+    }
+
 }
 
 // Two methods - both do the same
