@@ -19,3 +19,14 @@ a {
   user-select: none;
   cursor: pointer;
 }
+
+#my-button {
+  /* commented CSS below removes all styling */
+  /* all: unset; */
+  padding: 5px;
+  color: darkslategray;
+  background-color: darkseagreen;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 5px;
+  cursor: pointer;
+}
