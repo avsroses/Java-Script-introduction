@@ -17,8 +17,7 @@ let characterCounter = 1;
 // Function for when button is clicked
 function clickFunction() {
 
-    // Adds to counter and outputs to console
-    console.log('The button has been clicked');
+    // Adds to counter
     characterCounter++;
 
     // If statement to reset counter
