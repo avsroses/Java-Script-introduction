@@ -48,7 +48,9 @@ function clickFunction() {
     myParagraph.innerHTML = characterNames[characterCounter - 1];
 }
 
-// Changes text to what has been imputed from imput field
+/**
+ * Upadate character name to what is stored in the input field
+ */
 function submitButton() {
     myParagraph.innerHTML = characterName.value
 }
