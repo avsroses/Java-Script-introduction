@@ -37,11 +37,13 @@ function clickFunction() {
         characterImage.src = imageOne;
         return;
     }
-    else if (characterCounter === 2) {
+    
+    if (characterCounter === 2) {
         characterImage.src = imageTwo;
         return;
     }
-    else if (characterCounter === 3) {
+    
+    if (characterCounter === 3) {
         characterImage.src = imageThree;
         return;
     }
