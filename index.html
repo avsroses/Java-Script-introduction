@@ -24,8 +24,11 @@
   <div class="container width-full height-full">
     <!-- inner div - floating in middle of webpage -->
     <div class="container flex-column width-half height-500px bg-marine_blue text-white">
-      <div class="container flex-column">
-        <img draggable="true" id="complement-one" src="assets/compliments/hat.png" alt="a hat" />
+
+      <!-- Complement -->
+      <div class="container flex-row">
+        <img draggable="true" class="complement" src="assets/compliments/hat.png" alt="a hat" />
+        <img draggable="true" class="complement" src="assets/compliments/partyHat.png" alt="a party hat" />
       </div>
 
       <div class="container flex-column">
@@ -34,16 +37,17 @@
         <!-- Text under image that displays name -->
         <p id="character-name-text">Kirby</p>
 
-        <!-- Change character button -->
-        <button id="next-character-button"> Click me! </button>
-
         <!-- Changes name of character displayed with input -->
         <div class="container input-spacing">
           <input id="name-change-input" />
           <button id="name-change-button"> Change name </button>
         </div>
+
+        <!-- Change character button -->
+        <button id="next-character-button"> Click me! </button>
+
       </div>
-      
+
     </div>
 
   </div>

@@ -1,10 +1,10 @@
-const fancyHat = document.getElementById("complement-one");
+const complements = document.getElementsByClassName("complement")
 const dropZone = document.getElementById("character-image");
 
 function onDrop(event) {
-    // Bring fancy hat to the position (ClinetX, ClientY)
-    fancyHat.style.left = event.clientX - offsetX + "px";
-    fancyHat.style.top = event.clientY - offsetY + "px";
+    // Bring complement to the position (ClinetX, ClientY)
+    complement.style.left = event.clientX - offsetX + "px";
+    complement.style.top = event.clientY - offsetY + "px";
     console.log("Element has been dropped");
 }
 
@@ -18,13 +18,17 @@ let offsetY = 0;
 
 function onDragStart(event) {
 
-    const style = window.getComputedStyle(fancyHat, null);
+    const style = window.getComputedStyle(complement, null);
 
     offsetX = event.clientX - parseInt(style.left);
     offsetY = event.clientY - parseInt(style.top);
+
     console.log("I'm being dragged");
 }
 
 dropZone.ondrop = onDrop;
 dropZone.ondragover = onDragOver;
-fancyHat.ondragstart = onDragStart;
+
+for(complement of complements) {
+    complement.ondragstart = onDragStart;
+}
