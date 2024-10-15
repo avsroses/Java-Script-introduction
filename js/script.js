@@ -4,13 +4,17 @@
 // Constant variables
 
 // Image variables
-const imageOne = "assets/kirby.jpeg";
-const imageTwo = "assets/samus.jpeg";
-const imageThree = "assets/Wolf.webp";
+const image1 = "assets/kirby.jpeg";
+const image2 = "assets/samus.jpeg";
+const image3 = "assets/Wolf.webp";
 // alt text variables
 const altText1 = "Initial super smash bros character, Kirby";
 const altText2 = "Super smash bros character, Samus";
 const altText3 = "Super smash bros character, Wolf";
+// Name variables for text on screenb
+const characterName1 = "I am on character Kirby"
+const characterName2 = "I am on character Samus"
+const characterName3 = "I am on character Wolf"
 // index.html ids
 const myButton = document.getElementById("my-button");
 const myParagraph = document.getElementById("my-paragraph");
@@ -41,20 +45,23 @@ function clickFunction() {
 
     // IF statement for which character to display per counter
     if (characterCounter === 1) {
-        characterImage.src = imageOne;
+        characterImage.src = image1;
         characterImage.alt = altText1;
+        myParagraph.innerHTML = characterName1;
         return;
     }
-    
+
     if (characterCounter === 2) {
-        characterImage.src = imageTwo;
+        characterImage.src = image2;
         characterImage.alt = altText2;
+        myParagraph.innerHTML = characterName2;
         return;
     }
-    
+
     if (characterCounter === 3) {
-        characterImage.src = imageThree;
+        characterImage.src = image3;
         characterImage.alt = altText3;
+        myParagraph.innerHTML = characterName3;
         return;
     }
 
