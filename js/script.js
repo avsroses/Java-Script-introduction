@@ -19,7 +19,7 @@ const myParagraph = document.getElementById("my-paragraph");
 const characterImage = document.getElementById("image-1");
 
 const characterNameButton = document.getElementById("name-change-button");
-const characterName = document.getElementById("name-change-input")
+const characterName = document.getElementById("name-change-input");
 
 // Changing variables
 let characterCounter = 1;
@@ -52,7 +52,7 @@ function clickFunction() {
  * Upadate character name to what is stored in the input field
  */
 function submitButton() {
-    myParagraph.innerHTML = characterName.value
+    myParagraph.innerHTML = characterName.value;
 }
 
 
