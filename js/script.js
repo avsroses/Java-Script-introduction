@@ -1,20 +1,18 @@
 // *********
 // Variables
 // *********
+
 // Constant variables
 
 // Define sources for each character image
-const image1 = "assets/kirby.jpeg";
-const image2 = "assets/samus.jpeg";
-const image3 = "assets/Wolf.webp";
+const imageSources = ["assets/kirby.jpeg", "assets/samus.jpeg", "assets/Wolf.webp"];
+
 // define alt text for each character image
-const altText1 = "Initial super smash bros character, Kirby";
-const altText2 = "Super smash bros character, Samus";
-const altText3 = "Super smash bros character, Wolf";
+const imageAltText = ["Super smash bros character, Kirby", "Super smash bros character, Samus", "Super smash bros character, Wolf"];
+
 // Define text for paragraph for each character
-const characterName1 = "Kirby"
-const characterName2 = "Samus"
-const characterName3 = "Wolf"
+const characterNames = ["Kirby", "Samus", "Wolf"];
+
 // index.html ids
 const myButton = document.getElementById("my-button");
 const myParagraph = document.getElementById("my-paragraph");
@@ -40,31 +38,11 @@ function clickFunction() {
         characterCounter = 1;
     }
 
-    // Changes text without changing it in the HTML
-    // myParagraph.innerHTML = "I am on character " + characterCounter;
-
-    // IF statement for which character to display per counter
-    if (characterCounter === 1) {
-        characterImage.src = image1;
-        characterImage.alt = altText1;
-        myParagraph.innerHTML = characterName1;
-        return;
-    }
-
-    if (characterCounter === 2) {
-        characterImage.src = image2;
-        characterImage.alt = altText2;
-        myParagraph.innerHTML = characterName2;
-        return;
-    }
-
-    if (characterCounter === 3) {
-        characterImage.src = image3;
-        characterImage.alt = altText3;
-        myParagraph.innerHTML = characterName3;
-        return;
-    }
-
+    // Find image, name, and alt text related to specific character counter
+    // - 1 because the array has a 0 based index and the counter doesn't
+    characterImage.src = imageSources[characterCounter - 1];
+    characterImage.alt = imageAltText[characterCounter - 1];
+    myParagraph.innerHTML = characterNames[characterCounter - 1];
 }
 
 // Two methods - both do the same
