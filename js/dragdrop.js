@@ -52,11 +52,13 @@ function onDragStart(event) {
     offsetY = event.clientY - parseInt(style.top);
 }
 
+// link dropZone related events to dropZone object
 dropZone.ondrop = onDrop;
 dropZone.ondragover = onDragOver;
 
-// iterates through array
+// loop through HTML Elements stored inside the complements array
 for(let complement of complements) {
+    // link complement related events to each individual complement
     complement.ondragstart = onDragStart;
     complement.ondragover = onDragOver;
     complement.ondrop = onDrop;
