@@ -18,7 +18,7 @@ let offsetY = 0;
 let draggedImage = undefined;
 
 function onDragStart(event) {
-    draggedImage = event.target
+    draggedImage = event.target;
 
     const style = window.getComputedStyle(draggedImage, null);
 
@@ -34,4 +34,6 @@ dropZone.ondragover = onDragOver;
 // iterates through array
 for(let complement of complements) {
     complement.ondragstart = onDragStart;
+    complement.ondragover = onDragOver;
+    complement.ondrop = onDrop;
 }
