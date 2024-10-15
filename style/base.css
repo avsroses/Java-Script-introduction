@@ -21,7 +21,14 @@ a {
 }
 
 .input-spacing {
-  margin-top: 5px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.complement {
+  position: relative;
+  height: 100px;
+  width: 100px;
 }
 
 #next-character-button {
@@ -35,6 +42,7 @@ a {
   border-radius: 5px;
   cursor: pointer;
 }
+
 /* styles the change name button */
 #name-change-button {
   padding-left: 5px;
@@ -45,7 +53,7 @@ a {
 
 /* Adds space around character name */
 #character-name-text {
-  margin: 5px;
+  margin: 2px;
 }
 
 /* Makes images same size */
@@ -54,8 +62,3 @@ a {
   width: 250px;
 }
 
-.complement {
-  position: relative;
-  height: 100px;
-  width: 100px;
-}
