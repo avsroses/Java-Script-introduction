@@ -17,11 +17,12 @@ const characterNames = ["Kirby", "Samus", "Wolf"];
 const myButton = document.getElementById("my-button");
 const myParagraph = document.getElementById("my-paragraph");
 const characterImage = document.getElementById("image-1");
-const submitButton = document.getElementById("button2");
+
+const characterNameButton = document.getElementById("name-change-button");
+const characterName = document.getElementById("name-change-input")
 
 // Changing variables
 let characterCounter = 1;
-
 
 
 /**
@@ -39,6 +40,7 @@ function clickFunction() {
         characterCounter = 1;
     }
 
+    // 
     // Find image, name, and alt text related to specific character counter
     // - 1 because the array has a 0 based index and the counter doesn't
     characterImage.src = imageSources[characterCounter - 1];
@@ -46,7 +48,15 @@ function clickFunction() {
     myParagraph.innerHTML = characterNames[characterCounter - 1];
 }
 
-// Two methods - both do the same
+// Changes text to what has been imputed from imput field
+function submitButton() {
+    myParagraph.innerHTML = characterName.value
+}
+
+
+// Three methods - all do the same
 // document.getElementById("my-button").addEventListener("click", clickFunction);
 // document.getElementById("my-button").onclick = clickFunction;
 myButton.onclick = clickFunction;
+
+characterNameButton.onclick = submitButton;
