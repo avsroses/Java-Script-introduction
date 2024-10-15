@@ -55,7 +55,7 @@ a {
 }
 
 #complement-one {
-  position: absolute;
+  position: relative;
   height: 100px;
   width: 100px;
 }

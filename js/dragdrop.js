@@ -2,8 +2,9 @@ const fancyHat = document.getElementById("complement-one");
 const dropZone = document.getElementById("character-image");
 
 function onDrop(event) {
-    fancyHat.style.left = event.clientX + "px";
-    fancyHat.style.top = event.clientY + "px";
+    // Bring fancy hat to the position (ClinetX, ClientY)
+    fancyHat.style.left = event.clientX - offsetX + "px";
+    fancyHat.style.top = event.clientY - offsetY + "px";
     console.log("Element has been dropped");
 }
 
@@ -12,8 +13,16 @@ function onDragOver(event) {
     console.log("Something is being dragged over me!");
 }
 
-function onDragStart() {
-    console.log("I'm being dragged")
+let offsetX = 0;
+let offsetY = 0;
+
+function onDragStart(event) {
+
+    const style = window.getComputedStyle(fancyHat, null);
+
+    offsetX = event.clientX - parseInt(style.left);
+    offsetY = event.clientY - parseInt(style.top);
+    console.log("I'm being dragged");
 }
 
 dropZone.ondrop = onDrop;

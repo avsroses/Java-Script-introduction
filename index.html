@@ -1,51 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- style file -->
-    <link rel="stylesheet" href="./style/base.css" />
-    <link rel="stylesheet" href="./style/colour.css" />
-    <link rel="stylesheet" href="./style/layout.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-
-    <!-- Links in JavaScript file -->
-    <script src="js/script.js" defer></script>
-    <script src="js/dragdrop.js" defer></script>
+  <!-- style file -->
+  <link rel="stylesheet" href="./style/base.css" />
+  <link rel="stylesheet" href="./style/colour.css" />
+  <link rel="stylesheet" href="./style/layout.css" />
 
 
-    <title>HTML JavaScript</title>
-  </head>
+  <!-- Links in JavaScript file -->
+  <script src="js/script.js" defer></script>
+  <script src="js/dragdrop.js" defer></script>
 
-  <body>
-    <img
-      draggable="true"
-      id="complement-one"
-      src="assets/compliments/hat.png"
-      alt="a hat"
-    />
-    <!-- main div - full width and full height -->
-    <div class="container width-full height-full">
-      <!-- inner div - floating in middle of webpage -->
-      <div class="container flex-column width-half height-500px bg-marine_blue text-white">
-        <img id=character-image src="assets/kirby.jpeg" alt="Super smash bros character, kirby">
+
+  <title>HTML JavaScript</title>
+</head>
+
+<body>
+  <!-- main div - full width and full height -->
+  <div class="container width-full height-full">
+    <!-- inner div - floating in middle of webpage -->
+    <div class="container flex-column width-half height-500px bg-marine_blue text-white">
+      <div class="container flex-column">
+        <img draggable="true" id="complement-one" src="assets/compliments/hat.png" alt="a hat" />
+      </div>
+
+      <div class="container flex-column">
+        <img draggable="false" id=character-image src="assets/kirby.jpeg" alt="Super smash bros character, kirby">
 
         <!-- Text under image that displays name -->
         <p id="character-name-text">Kirby</p>
 
-        <!-- Changes name of character displayed with input -->
-        <div class="container input-spacing">
-          <input id="name-change-input"/>
-          <button id="name-change-button"> Change name </button>
-        </div>
-
         <!-- Change character button -->
         <button id="next-character-button"> Click me! </button>
-      </div>
 
+        <!-- Changes name of character displayed with input -->
+        <div class="container input-spacing">
+          <input id="name-change-input" />
+          <button id="name-change-button"> Change name </button>
+        </div>
+      </div>
+      
     </div>
 
-  </body>
+  </div>
+
+</body>
 
 </html>
