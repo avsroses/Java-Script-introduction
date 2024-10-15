@@ -2,17 +2,20 @@
 // Variables
 // *********
 // Constant variables
+
+// Image variables
 const imageOne = "assets/kirby.jpeg";
 const imageTwo = "assets/samus.jpeg";
 const imageThree = "assets/Wolf.webp";
-
+// alt text variables
 const altText1 = "Initial super smash bros character, Kirby";
 const altText2 = "Super smash bros character, Samus";
 const altText3 = "Super smash bros character, Wolf";
-
+// index.html ids
 const myButton = document.getElementById("my-button");
 const myParagraph = document.getElementById("my-paragraph");
 const characterImage = document.getElementById("image-1");
+
 // Changing variables
 let characterCounter = 1;
 
