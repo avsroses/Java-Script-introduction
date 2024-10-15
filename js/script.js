@@ -17,6 +17,7 @@ const characterNames = ["Kirby", "Samus", "Wolf"];
 const myButton = document.getElementById("my-button");
 const myParagraph = document.getElementById("my-paragraph");
 const characterImage = document.getElementById("image-1");
+const submitButton = document.getElementById("button2");
 
 // Changing variables
 let characterCounter = 1;
